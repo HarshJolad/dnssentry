@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dnssentry"
+version = "0.2.0"
+description = "Audits and configures SPF, DMARC, DKIM, and MX records on GoDaddy DNS."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "dnssentry contributors" }]
+keywords = ["dns", "godaddy", "spf", "dmarc", "dkim", "email-security"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: System Administrators",
+    "Topic :: Communications :: Email",
+    "Topic :: System :: Systems Administration",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/HarshJolad/dnssentry"
+Repository = "https://github.com/HarshJolad/dnssentry"
+Issues = "https://github.com/HarshJolad/dnssentry/issues"
+
+[project.scripts]
+dnssentry = "dnssentry.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dnssentry*"]
